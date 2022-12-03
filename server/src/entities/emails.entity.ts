@@ -15,7 +15,7 @@ export class Email {
   @JoinTable()
   user: User | null;
 
-  @ManyToMany(() => Contact, { eager: true })
+  @ManyToMany(() => Contact, { eager: true, cascade: true })
   @JoinTable()
   contacts: Contact[] | null;
 

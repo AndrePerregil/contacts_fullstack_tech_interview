@@ -10,7 +10,7 @@ export class Contact {
   @Column({ length: 20 })
   name: string;
 
-  @ManyToOne(() => User, { eager: true })
+  @ManyToOne(() => User, { eager: true, cascade: true })
   @JoinTable()
   user: User;
 
