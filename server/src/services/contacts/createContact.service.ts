@@ -67,7 +67,7 @@ const createContactService = async ({
   newContact.emails = contactEmails;
   await contactRepo.save(newContact);
 
-  return { ...newContact, user: instanceToPlain(user) };
+  return instanceToPlain(newContact);
 };
 
 export default createContactService;
