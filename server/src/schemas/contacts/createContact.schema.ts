@@ -19,7 +19,7 @@ const createContactSchema: SchemaOf<IContactSchema> = yup.object().shape({
         .matches(/^[0-9]*$/, "can only have integers")
     )
     .notRequired(),
-  emails: yup.array().notRequired(),
+  emails: yup.array().of(yup.string()).notRequired(),
 });
 
 export default createContactSchema;

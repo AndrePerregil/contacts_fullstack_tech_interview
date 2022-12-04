@@ -24,3 +24,8 @@ export interface IUserRequestPatch {
   username?: string;
   password?: string;
 }
+
+export interface IUserProfileRequest {
+  phones?: string[];
+  emails?: string[];
+}

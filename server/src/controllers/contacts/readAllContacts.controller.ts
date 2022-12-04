@@ -7,6 +7,7 @@ const readAllContactsController = async (req: Request, res: Response) => {
   try {
     const { userId } = req;
     const contacts = await readAllContactsService(userId!);
+
     return res.json({ data: contacts });
   } catch (err) {
     if (err instanceof AppError) {
