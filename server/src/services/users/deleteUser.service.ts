@@ -10,9 +10,7 @@ const deleteUserService = async (id: string) => {
     throw new AppError(404, "User not found!");
   }
 
-  await userRepo.delete(user);
-
-  return "User deleted sucessfuly";
+  await userRepo.delete({ id: user.id });
 };
 
 export default deleteUserService;

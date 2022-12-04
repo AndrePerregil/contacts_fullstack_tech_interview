@@ -1,6 +1,16 @@
-import { Column, Entity, PrimaryColumn, ManyToOne, JoinTable } from "typeorm";
+import {
+  Column,
+  Entity,
+  PrimaryColumn,
+  ManyToOne,
+  JoinTable,
+  ManyToMany,
+} from "typeorm";
 import { v4 as uuid } from "uuid";
+
 import { User } from "./users.entity";
+import { Phone } from "./phones.entity";
+import { Email } from "./emails.entity";
 
 @Entity("contacts")
 export class Contact {
@@ -13,6 +23,14 @@ export class Contact {
   @ManyToOne(() => User, { eager: true, cascade: true })
   @JoinTable()
   user: User;
+
+  @ManyToMany(() => Phone, { eager: true, cascade: true })
+  @JoinTable()
+  phones: Phone[];
+
+  @ManyToMany(() => Email, { eager: true, cascade: true })
+  @JoinTable()
+  emails: Email[];
 
   constructor() {
     if (!this.id) {

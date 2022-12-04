@@ -7,7 +7,7 @@ const createUserSchema: SchemaOf<IUserRequest> = yup.object().shape({
     .string()
     .matches(/^[A-Za-z\s]*$/, "username field can only have letters")
     .required()
-    .max(15, "Username field must have no more than 20 charaters")
+    .max(15, "Username field must have no more than 15 charaters")
     .min(5, "Username must have at least 5 characters"),
 
   password: yup

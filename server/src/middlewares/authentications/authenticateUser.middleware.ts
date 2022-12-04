@@ -9,7 +9,6 @@ const authenticateUserMiddleware = async (
 ) => {
   try {
     const { authorization } = req.headers;
-
     if (!authorization) {
       throw new AppError(401, "Missing authorization token");
     }
