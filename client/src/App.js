@@ -1,20 +1,12 @@
-import React, { useEffect, useState } from "react";
+import Router from "./routes";
+import { GlobalStyle } from "./styles/global";
 
 function App() {
-  const [user, setUser] = useState({});
-
-  useEffect(() => {
-    fetch("/api")
-      .then((res) => res.json())
-      .then((res) => {
-        setUser(res.data);
-      });
-  }, []);
-
   return (
-    <div>
-      <h1>Hello {user.name}</h1>
-    </div>
+    <>
+      <GlobalStyle />
+      <Router />
+    </>
   );
 }
 
