@@ -66,7 +66,7 @@ export const Header = styled.header`
   }
 
   span {
-    animation: flicker 0.2s infinite alternate;
+    animation: flash 0.2s infinite alternate;
   }
 
   @media (width>600px) {

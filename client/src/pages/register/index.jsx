@@ -6,4 +6,11 @@ import { Header } from "../../components/header";
 import { Main } from "../../components/main";
 import { PageContainer } from "../../components/pageContainer";
 import { Title } from "../../components/title";
-const Register = () => {};
+
+const Register = () => {
+  const navigate = useNavigate();
+
+  return "";
+};
+
+export default Register;

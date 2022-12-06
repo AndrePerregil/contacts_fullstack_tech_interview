@@ -15,14 +15,18 @@ const Landing = () => {
       <PageContainer>
         <Header>
           <h1>
-            @<span>c</span>onta<span>cts_</span>TI
+            @<span>c</span>onta<span>ct</span>s_TI
           </h1>
         </Header>
         <Main>
           <Container>
-            <Title color="#f70776">Welcome to @Contacts_TI</Title>
+            <Title interval="2s" color="#f70776">
+              Welcome to @Contacts_TI
+            </Title>
             <p> (TI stands for tech interview)</p>
-            <Title color="#01FF70">Manage your contacts!!!</Title>
+            <Title interval="1s" color="#01FF70">
+              Manage your contacts!!!
+            </Title>
             <p>(even though everyone has smartphone...)</p>
           </Container>
           <Container direction="row">

@@ -9,6 +9,14 @@ export const Container = styled.div`
 
   color: var(--white);
 
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
   h1,
   h2 {
     font-size: 16px;
