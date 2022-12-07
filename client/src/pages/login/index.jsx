@@ -32,6 +32,7 @@ const Login = () => {
     API.post("users/login", data)
       .then((res) => {
         localStorage.setItem("@contact_ti:token", res.data.token);
+        localStorage.setItem("@contact_ti:username", data.username);
       })
       .then((res) => {
         navigate("/dashboard");

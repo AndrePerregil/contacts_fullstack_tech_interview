@@ -5,7 +5,9 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: ${(props) => props.direction || "column"};
-  gap: 10px;
+  gap: ${(props) => props.gap || "10px"};
+  max-height: 70vh;
+  padding: 10px;
 
   color: var(--white);
 

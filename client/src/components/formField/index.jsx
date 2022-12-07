@@ -40,6 +40,12 @@ const FormFieldStyled = styled.div`
     color: var(--greenFocus);
   }
 
+  input[type="email"],
+  textarea {
+    background-color: var(--black);
+    color: var(--white);
+  }
+
   input:focus,
   input:hover {
     outline: none;
@@ -84,6 +90,10 @@ export const FormField = ({
   Svg,
   message,
   fieldContext,
+  onChangeCb,
+  field,
+  setter,
+  state,
 }) => {
   return (
     <FormFieldStyled color={color}>
@@ -93,6 +103,9 @@ export const FormField = ({
         defaultValue={value}
         placeholder={placeholder}
         {...fieldContext}
+        onChange={(e) => {
+          onChangeCb(state, setter, field, e.target.value);
+        }}
       />
       {Svg && <Svg />}
       <span>{message}</span>

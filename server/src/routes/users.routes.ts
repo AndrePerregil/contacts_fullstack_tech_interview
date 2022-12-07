@@ -21,12 +21,7 @@ const routes = Router();
 
 const userRoutes = () => {
   routes.post("", validateUserCreation(createUserSchema), createUserController);
-  routes.get(
-    "/:id",
-    authenticateUserMiddleware,
-    authenticateOwnershipMiddleware,
-    readUserController
-  );
+  routes.get("", authenticateUserMiddleware, readUserController);
   routes.patch(
     "/:id",
     authenticateUserMiddleware,

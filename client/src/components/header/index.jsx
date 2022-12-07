@@ -43,8 +43,8 @@ export const Header = styled.header`
     }
   }
 
-  width: 100%;
-  max-width: 1080px;
+  width: 95%;
+  max-width: 1050px;
 
   display: flex;
   flex-direction: row;
@@ -54,6 +54,8 @@ export const Header = styled.header`
   position: fixed;
   top: 0;
   z-index: 1000;
+  background-color: var(--black);
+  opacity: 0.9;
 
   text-shadow: 0 0 5px var(--white), 0 0 10px var(--white),
     0 0 15px var(--white), 0 0 30px var(--greenFocus),
@@ -61,12 +63,18 @@ export const Header = styled.header`
 
   h1 {
     color: var(--green);
-    font-size: 24px;
+    font-size: 16px;
     animation: flicker 2s infinite alternate;
   }
 
   span {
     animation: flash 0.2s infinite alternate;
+  }
+
+  button {
+    width: 60px;
+    font-size: 10px;
+    padding-top: 5px;
   }
 
   @media (width>600px) {

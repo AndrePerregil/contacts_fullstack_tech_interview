@@ -2,12 +2,15 @@ import styled from "styled-components";
 
 export const Main = styled.main`
   width: 100%;
-  height: 100vh;
+  height: fit-content;
+  min-height: 100vh;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: ${(props) => props.justify || "space-evenly"};
+  padding-top: 10vh;
+  padding-bottom: 10vh;
 
   p {
     color: var(--white);

@@ -6,8 +6,8 @@ import readUserService from "../../services/users/readUser.service";
 
 const readUserController = async (req: Request, res: Response) => {
   try {
-    const { id } = req.params;
-    const user = await readUserService(id);
+    const { userId } = req;
+    const user = await readUserService(userId!);
 
     return res.status(200).json({
       data: instanceToPlain(user),
