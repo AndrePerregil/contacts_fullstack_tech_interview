@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { Container } from "../../components/container";
@@ -9,10 +9,10 @@ import { Main } from "../../components/main";
 import { PageContainer } from "../../components/pageContainer";
 import { Title } from "../../components/title";
 import { ButtonsContainer } from "../../components/buttonsContainer";
-import { FormFieldOnChange, FormField } from "../../components/formField";
+import { FormFieldOnChange } from "../../components/formField";
 import { API } from "../../services/API";
 
-import { MdAccountCircle, MdPhone, MdEmail } from "react-icons/md";
+import { MdAccountCircle, MdPhone } from "react-icons/md";
 
 import { addField, subField } from "../../services/helpers";
 
