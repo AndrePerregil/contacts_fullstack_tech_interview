@@ -3,9 +3,9 @@
 It's basicly the contacts app every phone has, developed as a full-stack tech interview.</br>
 Developed using NodeJs(typescript) with express and typeORM in the backend, and React in the front-end. </br>
 
-Unfortunatly, life got in the way and i could spend as much time as i wanted to in this little project. I couldn't manage to write tests for either app, and there's cleaning up to do (refactoring) specially on the front-end.</br>
+Unfortunatly, life got in the way and i couldn't spend as much time as i wanted to in this little project. I couldn't manage to write tests for either app, and there's cleaning up to do (refactoring) and missing features specially on the front-end.</br>
 
-Not having a figma, or at least a reference img also made things slower.</br>
+Not having a figma, or at least a reference img also made things slower. I have to admit, i'm not the most artiscally minded individual, i'm happier implementing others design vision than comming up with aesthetics myself.</br>
 
 ## Set up
 
