@@ -6,4 +6,5 @@ export const ButtonsContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: ${(props) => props.gap};
+  margin-top: ${(props) => props.marginTop || 0};
 `;

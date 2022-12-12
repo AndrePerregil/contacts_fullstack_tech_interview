@@ -81,7 +81,7 @@ const FormFieldStyled = styled.div`
   }
 `;
 
-export const FormField = ({
+export const FormFieldOnChange = ({
   color,
   label,
   type,
@@ -106,6 +106,31 @@ export const FormField = ({
         onChange={(e) => {
           onChangeCb(state, setter, field, e.target.value);
         }}
+      />
+      {Svg && <Svg />}
+      <span>{message}</span>
+    </FormFieldStyled>
+  );
+};
+
+export const FormField = ({
+  color,
+  label,
+  type,
+  value,
+  placeholder,
+  Svg,
+  message,
+  fieldContext,
+}) => {
+  return (
+    <FormFieldStyled color={color}>
+      <label>{label}</label>
+      <input
+        type={type}
+        defaultValue={value}
+        placeholder={placeholder}
+        {...fieldContext}
       />
       {Svg && <Svg />}
       <span>{message}</span>

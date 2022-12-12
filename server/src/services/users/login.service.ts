@@ -21,10 +21,10 @@ const loginService = async ({ username, password }: IUserRequest) => {
   }
 
   const token = jwt.sign({ id: user.id }, String(process.env.SECRET_KEY), {
-    expiresIn: "24h",
+    expiresIn: "72h",
   });
 
-  return token;
+  return { token: token, id: user.id };
 };
 
 export default loginService;

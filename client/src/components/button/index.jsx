@@ -13,7 +13,7 @@ export const Button = styled.button`
   border-radius: 5px;
   border: none;
   margin-bottom: 10px;
-  width: 100px;
+  width: ${(props) => props.width || "100px"};
   transition: all 0.5s;
 
   margin-top: ${(props) => props.marginTop};

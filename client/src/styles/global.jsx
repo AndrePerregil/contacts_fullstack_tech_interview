@@ -8,6 +8,10 @@ export const GlobalStyle = createGlobalStyle`
         outline: 0;
     }
 
+    li{
+        list-style: none;
+    }
+
     :root{
         --black: #202020;
         --white: #DDDDDD;

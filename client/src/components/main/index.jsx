@@ -8,10 +8,10 @@ export const Main = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: ${(props) => props.justify || "space-evenly"};
+  justify-content: ${(props) => props.justify};
   padding-top: 10vh;
   padding-bottom: 10vh;
-
+  gap: 30px;
   p {
     color: var(--white);
     font-size: 10px;

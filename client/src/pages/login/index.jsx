@@ -14,7 +14,6 @@ import { MdPassword } from "react-icons/md";
 import { MdAccountCircle } from "react-icons/md";
 
 import { API } from "../../services/API";
-
 import { loginSchema } from "../../validations/schemas";
 
 const Login = () => {
@@ -31,11 +30,13 @@ const Login = () => {
   const submitCb = (data) => {
     API.post("users/login", data)
       .then((res) => {
-        localStorage.setItem("@contact_ti:token", res.data.token);
+        console.log(res.data);
+        localStorage.setItem("@contact_ti:token", res.data.data.token);
         localStorage.setItem("@contact_ti:username", data.username);
+        localStorage.setItem("@contact_ti:user_id", res.data.data.id);
       })
       .then((res) => {
-        navigate("/dashboard");
+        navigate("/contacts");
       })
       .catch((error) => {
         navigate("/");
@@ -48,7 +49,7 @@ const Login = () => {
           @<span>c</span>onta<span>ct</span>s_TI
         </h1>
       </Header>
-      <Main>
+      <Main justify="space-around">
         <Container>
           <form onSubmit={handleSubmit(submitCb)}>
             <Title interval="1s" color="#f70776">

@@ -1,10 +1,14 @@
 import styled from "styled-components";
 
-export const OverflowContainer = styled.div`
+export const ReactiveContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  height: 70%;
-  overflow: auto;
+  min-height: fit-content;
+  gap: 5px;
+
+  @media (width>600px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 `;

@@ -4,6 +4,8 @@ import Landing from "../pages/landing";
 import Register from "../pages/register";
 import Login from "../pages/login";
 import Profile from "../pages/profile";
+import Contacts from "../pages/contacts";
+import CreateContacts from "../pages/createContact";
 
 const Router = () => {
   return (
@@ -12,6 +14,8 @@ const Router = () => {
       <Route path={"/register"} element={<Register />} />
       <Route path={"/login"} element={<Login />} />
       <Route path={"/profile"} element={<Profile />} />
+      <Route path={"/contacts"} element={<Contacts />} />
+      <Route path={"/create/contact"} element={<CreateContacts />} />
     </Routes>
   );
 };

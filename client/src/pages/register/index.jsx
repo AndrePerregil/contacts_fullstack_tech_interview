@@ -47,7 +47,7 @@ const Register = () => {
       </Header>
       <Main>
         <Container>
-          <form onSubmit={handleSubmit(submitCb)}>
+          <form gap="30px" onSubmit={handleSubmit(submitCb)}>
             <Title interval="1s" color="#f70776">
               Register
             </Title>
@@ -74,12 +74,12 @@ const Register = () => {
               message={errors.confPassword?.message}
             />
             <Button color="#2ECC40" colorHover="#01FF70" marginTop="20px">
-              Login
+              Register
             </Button>
             <Container>
               <p>Already have an account?</p>
               <p>
-                Login <Link to={"/register"}>here</Link>
+                Login <Link to={"/login"}>here</Link>
               </p>
             </Container>
           </form>
